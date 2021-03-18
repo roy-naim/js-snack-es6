@@ -51,10 +51,9 @@ for (let i = 0; i < squadre.length; i++) {
   squadre[i].falli = randomNumberInRange(0, 100);
 
   const {nome, falli} = squadre[i]
-  newDati.push(nome, falli);
+  newDati.push({nome, falli});
+  // $('#lista').append(`<li>${nome}, ${falli}</li>`);
 }
-
-// const [teamOne, teamTwo, teamThree] = squadre[i].puntifatti
 
 console.log(newDati);
 
