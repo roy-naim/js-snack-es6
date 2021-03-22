@@ -51,3 +51,24 @@ const femmine = cats.filter((item) => item.sesso == 'Femmina');
 
 console.log(maschi);
 console.log(femmine);
+
+cats.forEach((item) => {
+    let colore;
+    if(item.sesso == 'Maschio' && item.eta < 14) {
+      colore = 'blu';
+    } else if (item.sesso == 'Maschio' && item.eta >= 14) {
+      colore = 'darkblu';
+    }
+
+    if(item.sesso == 'Femmina' && item.eta < 5) {
+      colore = 'rosa';
+    } else if (item.sesso == 'Femmina' && item.eta >= 5) {
+      colore = 'viola';
+    }
+
+    $('#cats2').append(`<li class="${colore}">${item.nome} è di colore ${item.colore} <i class="fas fa-ribbon"></i></li>`);
+});
+
+// Milestone 3
+Creare un nuovo array con prima tutti i gattini femmina e poi tutti i gattini maschio,
+inserendo solamente nome e colore e colore e opacità del fiocco per ogni gatto.
